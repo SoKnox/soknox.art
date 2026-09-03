@@ -286,7 +286,7 @@ function Nav({
 
 function ArtWork() {
   return (
-    <section id="work" className="pt-32 pb-24 lg:pt-40 lg:pb-32">
+    <section id="work" className="pt-32 pb-12 lg:pt-40 lg:pb-16">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="mb-16">
           <span className="text-base tracking-[0.12em] uppercase text-accent">Portfolio</span>
@@ -315,7 +315,7 @@ function ArtWork() {
 
 function About() {
   return (
-    <section id="about" className="py-24 lg:py-32 bg-secondary/40">
+    <section id="about" className="pt-12 pb-24 lg:pt-16 lg:pb-32 bg-secondary/40">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <div className="rounded-2xl overflow-hidden bg-muted h-[480px] lg:h-[560px]">
           <OptimizedImage
@@ -340,7 +340,7 @@ function About() {
 
 function ArtAbout() {
   return (
-    <section id="about" className="py-24 lg:py-32 bg-secondary/40">
+    <section id="about" className="pt-12 pb-24 lg:pt-16 lg:pb-32 bg-secondary/40">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
 
         {/* Single portrait image — full uncropped, natural aspect ratio */}
@@ -382,7 +382,7 @@ function ArtAbout() {
 
 function Services({ items }: { items: typeof SERVICES_CLIENT }) {
   return (
-    <section id="services" className="py-24 lg:py-32 bg-foreground relative overflow-hidden">
+    <section id="services" className="pt-12 pb-24 lg:pt-16 lg:pb-32 bg-foreground relative overflow-hidden">
       <div
         className="absolute inset-0 opacity-[0.025]"
         style={{ backgroundImage: "radial-gradient(circle, white 1px, transparent 1px)", backgroundSize: "28px 28px" }}
@@ -712,7 +712,7 @@ function ClientGallery({ photos }: { photos: { src: string; alt: string }[] }) {
 
 function ClientWork() {
   return (
-    <section id="work" className="pt-32 pb-24 lg:pt-40 lg:pb-32">
+    <section id="work" className="pt-32 pb-12 lg:pt-40 lg:pb-16">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="mb-16">
           <span className="text-base tracking-[0.12em] uppercase text-accent">Portfolio</span>
@@ -870,7 +870,7 @@ function PhotoEditing() {
   ];
 
   return (
-    <section id="editing" className="py-24 lg:py-32 bg-secondary/40">
+    <section id="editing" className="py-12 lg:py-16 bg-secondary/40">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="mb-16">
           <span className="text-base tracking-[0.12em] uppercase text-accent">Editing services</span>
