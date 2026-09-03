@@ -719,6 +719,14 @@ function ClientWork() {
           <h1 className="font-display text-[clamp(2.8rem,6vw,5rem)] font-medium text-foreground mt-3 leading-[1.05]">
             Client work
           </h1>
+          <a
+            href="https://sophie-knox.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-base text-muted-foreground hover:text-foreground transition-colors mt-6"
+          >
+            See my design work here <ArrowUpRight size={16} />
+          </a>
         </div>
 
         <div className="space-y-24">
