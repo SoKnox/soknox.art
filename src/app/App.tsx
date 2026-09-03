@@ -723,9 +723,9 @@ function ClientWork() {
             href="https://sophie-knox.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-base text-muted-foreground hover:text-foreground transition-colors mt-6"
+            className="inline-flex items-center gap-2.5 text-base font-medium text-accent-foreground bg-accent px-6 py-3 rounded-full hover:opacity-90 transition-opacity mt-8"
           >
-            See my design work here <ArrowUpRight size={16} />
+            See my design work here <ArrowUpRight size={18} />
           </a>
         </div>
 
