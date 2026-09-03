@@ -100,20 +100,21 @@ const SUPREME_REELS = [
     src: "/videos/Video1.mp4",
     bullets: ["60-minute interview format", "6 team members featured", "5 guiding questions"],
   },
-];
-
-const SUPREME_INSTAGRAM_EMBEDS = [
   {
-    permalink: "https://www.instagram.com/reel/DaLFWe6NBIO/",
+    src: "/videos/Video2.mp4",
     bullets: ["Brand announcement video", "Custom graphic design", "Motion design built in Canva"],
   },
   {
-    permalink: "https://www.instagram.com/reel/DaBbGTQN7kv/",
+    src: "/videos/Video3.mp4",
     bullets: ["Part of the \"YES\" campaign"],
   },
   {
-    permalink: "https://www.instagram.com/reel/Da6Icf6JmWv/",
+    src: "/videos/Video4.mp4",
     bullets: ["Built around a trending social reel format"],
+  },
+  {
+    src: "/videos/Video5.mp4",
+    bullets: ["1 hour podcast broken down and edited into multiple reels"],
   },
 ];
 
@@ -554,51 +555,6 @@ function ArtPage({ onBack, onSwitch }: { onBack: () => void; onSwitch: () => voi
 
 // ── Client Photography Page ──────────────────────────────────────────────────
 
-function InstagramEmbed({ permalink }: { permalink: string }) {
-  useEffect(() => {
-    const w = window as unknown as { instgrm?: { Embeds: { process: () => void } } };
-    if (w.instgrm) {
-      w.instgrm.Embeds.process();
-      return;
-    }
-    if (document.querySelector('script[data-instagram-embed]')) return;
-    const script = document.createElement("script");
-    script.src = "https://www.instagram.com/embed.js";
-    script.async = true;
-    script.dataset.instagramEmbed = "true";
-    document.body.appendChild(script);
-  }, [permalink]);
-
-  return (
-    <blockquote
-      className="instagram-media"
-      data-instgrm-captioned
-      data-instgrm-permalink={permalink}
-      data-instgrm-version="14"
-      style={{
-        background: "#fff",
-        border: "1px solid rgba(0,0,0,0.08)",
-        borderRadius: 16,
-        margin: 0,
-        maxWidth: 328,
-        minWidth: 326,
-        width: "100%",
-        padding: "32px 20px",
-        textAlign: "center",
-      }}
-    >
-      <a
-        href={permalink}
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{ color: "#3897f0", fontSize: 14, textDecoration: "none", fontFamily: "Arial, sans-serif" }}
-      >
-        View this post on Instagram
-      </a>
-    </blockquote>
-  );
-}
-
 function ReelStrip({ children }: { children: React.ReactNode }) {
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -791,19 +747,6 @@ function ClientWork() {
                   </div>
                   <ul className="mt-4 space-y-2">
                     {reel.bullets.map((b) => (
-                      <li key={b} className="flex items-start gap-2 text-[15px] text-muted-foreground">
-                        <span className="mt-[6px] w-1 h-1 rounded-full bg-accent flex-shrink-0" />
-                        {b}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-              {SUPREME_INSTAGRAM_EMBEDS.map((post) => (
-                <div key={post.permalink} className="flex-shrink-0" style={{ width: 328 }}>
-                  <InstagramEmbed permalink={post.permalink} />
-                  <ul className="mt-4 space-y-2">
-                    {post.bullets.map((b) => (
                       <li key={b} className="flex items-start gap-2 text-[15px] text-muted-foreground">
                         <span className="mt-[6px] w-1 h-1 rounded-full bg-accent flex-shrink-0" />
                         {b}
